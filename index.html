@@ -47,9 +47,18 @@
             transform: scale(1.05);
         }
 
-        .logo-placeholder {
+        .logo-img {
+            max-width: 100%;
+            height: auto;
             max-height: 80px;
-            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+        }
+
+        .lab-img {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 1 / 1; /* Adattabile tra 4:5 e 5:4 */
+            object-fit: cover;
+            border-radius: 1.5rem;
         }
     </style>
 </head>
@@ -58,12 +67,11 @@
     <!-- Header / Nav -->
     <header class="bg-white shadow-sm sticky top-0 z-50">
         <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-            <div class="flex items-center space-x-2">
-                <!-- Fallback se l'immagine non carica -->
-                <img src="https://i.ibb.co/XrnGTPH/image-7a82ad.png" alt="InfoMoro Logo" class="logo-placeholder" onerror="this.style.display='none'; document.getElementById('logo-text').style.display='block';">
-                <span id="logo-text" class="text-2xl font-bold text-brand-red hidden">InfoMoro</span>
+            <div class="flex items-center">
+                <!-- Logo caricato da cartella locale img -->
+                <img src="img/info.png" alt="InfoMoro Logo" class="logo-img" onerror="this.onerror=null; this.src='https://i.ibb.co/XrnGTPH/image-7a82ad.png';">
             </div>
-            <a href="https://wa.me/393496887076" class="whatsapp-btn px-4 py-2 rounded-full font-bold flex items-center shadow-md">
+            <a href="https://wa.me/393496887076?text=Ciao!%20Ho%20trovato%20il%20tuo%20numero%20in%20lavanderia%20e%20avrei%20bisogno%20di%20assistenza." class="whatsapp-btn px-4 py-2 rounded-full font-bold flex items-center shadow-md">
                 <i class="fab fa-whatsapp mr-2"></i> Scrivimi ora
             </a>
         </div>
@@ -76,14 +84,17 @@
                 Il tuo PC è bloccato o non si accende? <br>Non disperare, lo sistemo io.
             </h1>
             <p class="text-lg md:text-xl mb-8 opacity-90">
-                Riparazioni rapide per studenti, lavoratori fuori sede e per chi vuole un computer che funzioni e basta.
+                Riparazioni rapide per studenti, lavoratori fuori sede e per chi vuole un computer che funzioni e basta. Ricevo a <strong>Cantalupo e Origgio</strong>.
             </p>
-            <div class="bg-white/10 backdrop-blur-md p-4 rounded-lg inline-block border border-white/20">
+            <div class="bg-white/10 backdrop-blur-md p-4 rounded-lg inline-block border border-white/20 mb-8">
                 <p class="font-bold text-yellow-300"><i class="fas fa-clock mr-2"></i> Hai un'urgenza? Ti presto un PC di cortesia!</p>
             </div>
-            <div class="mt-10">
-                <a href="https://wa.me/393496887076" class="bg-white text-brand-red font-bold py-4 px-8 rounded-full text-lg shadow-xl hover:bg-gray-100 transition">
-                    Prenota assistenza su WhatsApp
+            <div class="flex flex-col md:flex-row justify-center gap-4">
+                <a href="https://wa.me/393496887076?text=Ciao!%20Ho%20bisogno%20di%20una%20riparazione%20veloce." class="bg-white text-brand-red font-bold py-4 px-8 rounded-full text-lg shadow-xl hover:bg-gray-100 transition">
+                    Riparazione veloce
+                </a>
+                <a href="https://wa.me/393496887076?text=Ciao!%20Avrei%20bisogno%20di%20un%20computer%20di%20cortesia%20mentre%20riperi%20il%20mio." class="bg-brand-red border border-white/30 text-white font-bold py-4 px-8 rounded-full text-lg shadow-xl hover:bg-red-700 transition">
+                    Serve un PC di cortesia?
                 </a>
             </div>
         </div>
@@ -96,19 +107,22 @@
             <div class="card p-8 rounded-2xl shadow-sm border-t-4 border-brand-red">
                 <div class="text-4xl text-brand-red mb-4"><i class="fas fa-graduation-cap"></i></div>
                 <h3 class="text-xl font-bold mb-3">Esame in arrivo?</h3>
-                <p class="text-gray-600">Recupero i tuoi file e la tua tesi anche se il PC sembra morto. Non perdere il lavoro di mesi.</p>
+                <p class="text-gray-600 mb-6">Recupero i tuoi file e la tua tesi anche se il PC sembra morto. Non perdere il lavoro di mesi.</p>
+                <a href="https://wa.me/393496887076?text=Ciao!%20Ho%20bisogno%20di%20un%20recupero%20dati%20urgente%20per%20il%20mio%20computer." class="text-brand-red font-bold hover:underline">Richiedi recupero dati &rarr;</a>
             </div>
             <!-- Trasferisti -->
             <div class="card p-8 rounded-2xl shadow-sm border-t-4 border-brand-red">
                 <div class="text-4xl text-brand-red mb-4"><i class="fas fa-suitcase"></i></div>
                 <h3 class="text-xl font-bold mb-3">Fuori Sede?</h3>
-                <p class="text-gray-600">Sono il tuo tecnico di fiducia in città. Riparazioni veloci senza le attese dei grandi centri.</p>
+                <p class="text-gray-600 mb-6">Sono il tuo tecnico di fiducia in città. Riparazioni veloci tra Cantalupo e Origgio.</p>
+                <a href="https://wa.me/393496887076?text=Ciao!%20Ho%20bisogno%20di%20una%20riparazione%20veloce%20per%20il%20mio%20PC." class="text-brand-red font-bold hover:underline">Sistemalo subito &rarr;</a>
             </div>
             <!-- Senior -->
             <div class="card p-8 rounded-2xl shadow-sm border-t-4 border-brand-red">
                 <div class="text-4xl text-brand-red mb-4"><i class="fas fa-user-shield"></i></div>
                 <h3 class="text-xl font-bold mb-3">Troppi Misteri?</h3>
-                <p class="text-gray-600">Pulisco il PC da virus e pubblicità. Lo rendo veloce e semplice da usare, proprio come una volta.</p>
+                <p class="text-gray-600 mb-6">Pulisco il PC da virus e pubblicità. Lo rendo veloce e semplice da usare, proprio come una volta.</p>
+                <a href="https://wa.me/393496887076?text=Ciao!%20Ho%20il%20computer%20lento%20e%20vorrei%20velocizzarlo." class="text-brand-red font-bold hover:underline">Velocizza il PC &rarr;</a>
             </div>
         </div>
     </section>
@@ -127,8 +141,9 @@
                     <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i> <strong>PC Muletto:</strong> Se non puoi restare senza, te ne presto uno io.</li>
                 </ul>
             </div>
-            <div class="md:w-1/2 bg-gray-100 p-8 rounded-3xl border-2 border-dashed border-gray-300 text-center">
-                <p class="text-gray-500 italic">[Spazio per foto: Tu nel tuo laboratorio o il PC di cortesia]</p>
+            <div class="md:w-1/2">
+                <!-- Immagine di laboratorio/intervento che si adatta dinamicamente -->
+                <img src="img/laboratorio.jpg" alt="InfoMoro Laboratorio" class="lab-img shadow-2xl" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1597733336794-12d05021d510?auto=format&fit=crop&q=80&w=800';">
             </div>
         </div>
     </section>
@@ -144,18 +159,18 @@
             </div>
             <div class="text-center">
                 <div class="w-12 h-12 bg-brand-red text-white rounded-full flex items-center justify-center mx-auto mb-4 font-bold text-xl">2</div>
-                <h4 class="font-bold">Check-up</h4>
-                <p class="text-sm text-gray-600">Porti il PC in laboratorio (diagnosi 20/30€).</p>
+                <h4 class="font-bold">Telefonata</h4>
+                <p class="text-sm text-gray-600">Telefonata gratuita per capire il problema.</p>
             </div>
             <div class="text-center">
                 <div class="w-12 h-12 bg-brand-red text-white rounded-full flex items-center justify-center mx-auto mb-4 font-bold text-xl">3</div>
-                <h4 class="font-bold">Riparazione</h4>
-                <p class="text-sm text-gray-600">Lavoro veloce sul tuo dispositivo.</p>
+                <h4 class="font-bold">Incontro</h4>
+                <p class="text-sm text-gray-600">Ci vedremo da me o da te per risolvere il problema.</p>
             </div>
             <div class="text-center">
                 <div class="w-12 h-12 bg-brand-red text-white rounded-full flex items-center justify-center mx-auto mb-4 font-bold text-xl">4</div>
                 <h4 class="font-bold">Fine!</h4>
-                <p class="text-sm text-gray-600">Torni a casa con un PC che corre.</p>
+                <p class="text-sm text-gray-600">I problemi del tuo PC saranno risolti.</p>
             </div>
         </div>
     </section>
@@ -165,27 +180,29 @@
         <div class="container mx-auto grid md:grid-cols-2 gap-8">
             <div>
                 <h3 class="text-2xl font-bold mb-4">InfoMoro</h3>
-                <p class="opacity-70 mb-4">Riparazione PC, ottimizzazione e recupero dati. Ricevo su appuntamento.</p>
-                <div class="flex space-x-4 text-xl">
-                    <a href="https://wa.me/393496887076" class="hover:text-brand-red"><i class="fab fa-whatsapp"></i></a>
-                    <a href="#" class="hover:text-brand-red"><i class="fab fa-facebook"></i></a>
-                    <a href="#" class="hover:text-brand-red"><i class="fab fa-instagram"></i></a>
+                <p class="opacity-70 mb-4">Riparazione PC, ottimizzazione e recupero dati. Ricevo a Cantalupo e Origgio su appuntamento.</p>
+                <div class="flex space-x-6 text-2xl">
+                    <a href="https://wa.me/393496887076?text=Ciao!%20Ho%20trovato%20il%20tuo%20numero%20in%20lavanderia." class="hover:text-brand-red transition"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=100049981557196" class="hover:text-brand-red transition text-blue-500"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/infomoro/" class="hover:text-brand-red transition text-pink-500"><i class="fab fa-instagram"></i></a>
+                    <a href="https://share.google/QQDMoQ7DvRKc1TLv6" class="hover:text-brand-red transition text-yellow-500"><i class="fab fa-google"></i></a>
                 </div>
             </div>
-            <div class="bg-white/5 p-6 rounded-xl">
-                <h4 class="font-bold mb-2"><i class="fas fa-map-marker-alt mr-2 text-brand-red"></i> Dove Trovarmi</h4>
-                <p class="opacity-70">Disponibile per ritiro e consegna a domicilio o in sede (uscita da 30€).</p>
-                <p class="mt-4 font-bold">Tel/WhatsApp: +39 349 688 7076</p>
+            <div class="bg-white/5 p-6 rounded-xl border border-white/10">
+                <h4 class="font-bold mb-2 text-brand-red"><i class="fas fa-map-marker-alt mr-2"></i> Dove Trovarmi</h4>
+                <p class="opacity-80">Sedi: <strong>Cantalupo</strong> e <strong>Origgio</strong>.</p>
+                <p class="opacity-70 text-sm mt-1">Disponibile per ritiro e consegna a domicilio o in sede (uscita da 30€).</p>
+                <p class="mt-4 font-bold text-lg">WhatsApp: +39 349 688 7076</p>
             </div>
         </div>
         <div class="text-center mt-10 pt-6 border-t border-white/10 text-xs opacity-50">
-            &copy; 2024 InfoMoro. Tutti i diritti riservati.
+            &copy; 2026 Denis Moroni - P.iva 03898790120.
         </div>
     </footer>
 
     <!-- Floating Mobile CTA -->
     <div class="fixed bottom-4 right-4 md:hidden">
-        <a href="https://wa.me/393496887076" class="whatsapp-btn w-14 h-14 rounded-full flex items-center justify-center text-2xl shadow-2xl">
+        <a href="https://wa.me/393496887076?text=Ciao!%20Ho%20trovato%20il%20tuo%20numero%20in%20lavanderia." class="whatsapp-btn w-14 h-14 rounded-full flex items-center justify-center text-2xl shadow-2xl">
             <i class="fab fa-whatsapp"></i>
         </a>
     </div>
