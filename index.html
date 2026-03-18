@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InfoMoro - Riparazione Computer e Assistenza</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --brand-red-dark: #6e1011;
+            --brand-red-mid: #9b1c1e;
+            --brand-red-light: #bc2023;
+            --bg-soft-gray: #f4f4f4;
+            --text-main: #1a1a1a;
+        }
+
+        body {
+            background-color: var(--bg-soft-gray);
+            color: var(--text-main);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .bg-brand-red { background-color: var(--brand-red-light); }
+        .text-brand-red { color: var(--brand-red-light); }
+        .border-brand-red { border-color: var(--brand-red-light); }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, var(--brand-red-dark) 0%, var(--brand-red-mid) 100%);
+        }
+
+        .card {
+            background: white;
+            transition: transform 0.2s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .whatsapp-btn {
+            background-color: #25D366;
+            color: white;
+            transition: all 0.3s;
+        }
+        .whatsapp-btn:hover {
+            background-color: #128C7E;
+            transform: scale(1.05);
+        }
+
+        .logo-placeholder {
+            max-height: 80px;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Nav -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <!-- Fallback se l'immagine non carica -->
+                <img src="https://i.ibb.co/XrnGTPH/image-7a82ad.png" alt="InfoMoro Logo" class="logo-placeholder" onerror="this.style.display='none'; document.getElementById('logo-text').style.display='block';">
+                <span id="logo-text" class="text-2xl font-bold text-brand-red hidden">InfoMoro</span>
+            </div>
+            <a href="https://wa.me/393496887076" class="whatsapp-btn px-4 py-2 rounded-full font-bold flex items-center shadow-md">
+                <i class="fab fa-whatsapp mr-2"></i> Scrivimi ora
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient text-white py-16 px-4">
+        <div class="container mx-auto text-center max-w-4xl">
+            <h1 class="text-3xl md:text-5xl font-extrabold mb-6">
+                Il tuo PC è bloccato o non si accende? <br>Non disperare, lo sistemo io.
+            </h1>
+            <p class="text-lg md:text-xl mb-8 opacity-90">
+                Riparazioni rapide per studenti, lavoratori fuori sede e per chi vuole un computer che funzioni e basta.
+            </p>
+            <div class="bg-white/10 backdrop-blur-md p-4 rounded-lg inline-block border border-white/20">
+                <p class="font-bold text-yellow-300"><i class="fas fa-clock mr-2"></i> Hai un'urgenza? Ti presto un PC di cortesia!</p>
+            </div>
+            <div class="mt-10">
+                <a href="https://wa.me/393496887076" class="bg-white text-brand-red font-bold py-4 px-8 rounded-full text-lg shadow-xl hover:bg-gray-100 transition">
+                    Prenota assistenza su WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Punti di Dolore / Target -->
+    <section class="py-16 container mx-auto px-4">
+        <div class="grid md:grid-cols-3 gap-8 text-center">
+            <!-- Studenti -->
+            <div class="card p-8 rounded-2xl shadow-sm border-t-4 border-brand-red">
+                <div class="text-4xl text-brand-red mb-4"><i class="fas fa-graduation-cap"></i></div>
+                <h3 class="text-xl font-bold mb-3">Esame in arrivo?</h3>
+                <p class="text-gray-600">Recupero i tuoi file e la tua tesi anche se il PC sembra morto. Non perdere il lavoro di mesi.</p>
+            </div>
+            <!-- Trasferisti -->
+            <div class="card p-8 rounded-2xl shadow-sm border-t-4 border-brand-red">
+                <div class="text-4xl text-brand-red mb-4"><i class="fas fa-suitcase"></i></div>
+                <h3 class="text-xl font-bold mb-3">Fuori Sede?</h3>
+                <p class="text-gray-600">Sono il tuo tecnico di fiducia in città. Riparazioni veloci senza le attese dei grandi centri.</p>
+            </div>
+            <!-- Senior -->
+            <div class="card p-8 rounded-2xl shadow-sm border-t-4 border-brand-red">
+                <div class="text-4xl text-brand-red mb-4"><i class="fas fa-user-shield"></i></div>
+                <h3 class="text-xl font-bold mb-3">Troppi Misteri?</h3>
+                <p class="text-gray-600">Pulisco il PC da virus e pubblicità. Lo rendo veloce e semplice da usare, proprio come una volta.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Valore Esclusivo -->
+    <section class="bg-white py-16">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center gap-12">
+            <div class="md:w-1/2">
+                <h2 class="text-3xl font-bold mb-6">Parlo la tua lingua, non il "tecnichese".</h2>
+                <p class="text-lg mb-6 text-gray-700 italic">
+                    "Mentre lavi i tuoi panni in lavanderia, io pulisco il tuo computer."
+                </p>
+                <ul class="space-y-4">
+                    <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i> <strong>Valutazione chiara:</strong> Ti spiego il problema in modo semplice.</li>
+                    <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i> <strong>Prezzi onesti:</strong> Saprai quanto spendi prima di iniziare.</li>
+                    <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i> <strong>PC Muletto:</strong> Se non puoi restare senza, te ne presto uno io.</li>
+                </ul>
+            </div>
+            <div class="md:w-1/2 bg-gray-100 p-8 rounded-3xl border-2 border-dashed border-gray-300 text-center">
+                <p class="text-gray-500 italic">[Spazio per foto: Tu nel tuo laboratorio o il PC di cortesia]</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Processo -->
+    <section class="py-16 container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12">Come funziona (è facilissimo)</h2>
+        <div class="grid md:grid-cols-4 gap-4">
+            <div class="text-center">
+                <div class="w-12 h-12 bg-brand-red text-white rounded-full flex items-center justify-center mx-auto mb-4 font-bold text-xl">1</div>
+                <h4 class="font-bold">Messaggio</h4>
+                <p class="text-sm text-gray-600">Foto o descrizione su WhatsApp.</p>
+            </div>
+            <div class="text-center">
+                <div class="w-12 h-12 bg-brand-red text-white rounded-full flex items-center justify-center mx-auto mb-4 font-bold text-xl">2</div>
+                <h4 class="font-bold">Check-up</h4>
+                <p class="text-sm text-gray-600">Porti il PC in laboratorio (diagnosi 20/30€).</p>
+            </div>
+            <div class="text-center">
+                <div class="w-12 h-12 bg-brand-red text-white rounded-full flex items-center justify-center mx-auto mb-4 font-bold text-xl">3</div>
+                <h4 class="font-bold">Riparazione</h4>
+                <p class="text-sm text-gray-600">Lavoro veloce sul tuo dispositivo.</p>
+            </div>
+            <div class="text-center">
+                <div class="w-12 h-12 bg-brand-red text-white rounded-full flex items-center justify-center mx-auto mb-4 font-bold text-xl">4</div>
+                <h4 class="font-bold">Fine!</h4>
+                <p class="text-sm text-gray-600">Torni a casa con un PC che corre.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12 px-4">
+        <div class="container mx-auto grid md:grid-cols-2 gap-8">
+            <div>
+                <h3 class="text-2xl font-bold mb-4">InfoMoro</h3>
+                <p class="opacity-70 mb-4">Riparazione PC, ottimizzazione e recupero dati. Ricevo su appuntamento.</p>
+                <div class="flex space-x-4 text-xl">
+                    <a href="https://wa.me/393496887076" class="hover:text-brand-red"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" class="hover:text-brand-red"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="hover:text-brand-red"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="bg-white/5 p-6 rounded-xl">
+                <h4 class="font-bold mb-2"><i class="fas fa-map-marker-alt mr-2 text-brand-red"></i> Dove Trovarmi</h4>
+                <p class="opacity-70">Disponibile per ritiro e consegna a domicilio o in sede (uscita da 30€).</p>
+                <p class="mt-4 font-bold">Tel/WhatsApp: +39 349 688 7076</p>
+            </div>
+        </div>
+        <div class="text-center mt-10 pt-6 border-t border-white/10 text-xs opacity-50">
+            &copy; 2024 InfoMoro. Tutti i diritti riservati.
+        </div>
+    </footer>
+
+    <!-- Floating Mobile CTA -->
+    <div class="fixed bottom-4 right-4 md:hidden">
+        <a href="https://wa.me/393496887076" class="whatsapp-btn w-14 h-14 rounded-full flex items-center justify-center text-2xl shadow-2xl">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+</body>
+</html>
